@@ -1,5 +1,10 @@
 <% content_for(:title, "Index | Know Vote") %>
 <div class = "container">
 <h1>Know Vote</h1>
+<%= link_to "Submit New Story", new_link_path, :class => "btn btn-primary" %></p>
+
+<% @links.each do |link| %>
+<p><%= link.name %></p>
+<% end %> 
 
 </div>
