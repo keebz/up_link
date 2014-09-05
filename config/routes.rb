@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
-root :to => 'links#index'
+  root :to => 'links#index'
 
-resources :links
+  resources :links do
+    resources :votes, :only => [:create] 
+  end
 
 end

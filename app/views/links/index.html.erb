@@ -1,12 +1,19 @@
-<% content_for(:title, "Index | Know Vote") %>
+<% content_for(:title, "Index | Up_Link") %>
 <div class = "container">
-<h1>Know Vote</h1>
-<%= link_to "Submit New Story", new_link_path, :class => "btn btn-primary" %></p>
+<h1>Up_Link</h1>
+<h4>Here are the top 10 links you should know about RIGHT.NOW.</h4>
+<%= link_to "Submit New Link", new_link_path, :class => "btn btn-primary" %></p>
+<br>
+<br>
 
-<% @links.each do |link| %>
-<p><%= link_to link.title, link.hyperlink %> <%= link_to "x", link_path(link.id),
+<% @links.rate.each do |link| %>
+<p> +<%= link.votes.count %>
+	<%=link_to "^", link_votes_path(link.id), :data => {:method => "post"},
+											  :class => "btn-sm btn-success" %> 
+	
+	<%= link_to link.title, link.hyperlink %> <%= link_to "x", link_path(link.id),
 															  :data => {:method => "delete"}, 
-															  :class => "btn btn-danger" %></p>
+															  :class => "btn-xs btn-danger" %></p>
 <% end %> 
 
 </div>

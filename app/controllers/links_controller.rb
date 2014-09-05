@@ -19,7 +19,7 @@ def create
 			@link.save
 		end	
 
-		flash[:notice] = "Story Added"
+		flash[:notice] = "Link Added"
 		redirect_to "/"
 	else
 		render 'new'
