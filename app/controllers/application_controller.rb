@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def authorize
-  	redirect_to new_session_path, flash[:notice] = "Must Be Logged In!" if current_user.nil?
+  	redirect_to new_session_path, alert: "Must Be Logged In!" if current_user.nil?
   end
 
   private
