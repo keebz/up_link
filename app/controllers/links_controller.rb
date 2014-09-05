@@ -10,6 +10,7 @@ end
 
 def create
 	@link = Link.new(link_params)
+	@link.created = DateTime.now
 	if @link.save
 		if !@link.hyperlink.include?('http://') && !@link.hyperlink.include?('www.')
 			@link.hyperlink = "http://www." + @link.hyperlink
@@ -44,7 +45,7 @@ end
 
 private
 def link_params
-	params.require(:link).permit(:title, :hyperlink)
+	params.require(:link).permit(:title, :hyperlink, :description, :created)
 end
 
 end

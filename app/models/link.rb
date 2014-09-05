@@ -4,8 +4,8 @@ class Link <ActiveRecord::Base
 
 	has_many :votes
 
-	def self.rate
-		all.sort_by{|link| link.votes.count}.reverse
+	def self.top
+		all.sort_by{|link| link.created}.reverse.first(5).sort_by{|link| link.votes.count}.reverse
 	end
 
 end

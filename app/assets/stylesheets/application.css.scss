@@ -1,5 +1,23 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#vote_block {
+	font-size: 35px;
+	float: left;
+}
+
+#link_block {
+	margin-left: 85px;
+}
+
+#title {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#description {
+	font-style: italic;
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
