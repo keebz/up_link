@@ -4,7 +4,9 @@
 <%= link_to "Submit New Story", new_link_path, :class => "btn btn-primary" %></p>
 
 <% @links.each do |link| %>
-<p><%= link_to link.title, link.hyperlink %></p>
+<p><%= link_to link.title, link.hyperlink %> <%= link_to "x", link_path(link.id),
+															  :data => {:method => "delete"}, 
+															  :class => "btn btn-danger" %></p>
 <% end %> 
 
 </div>

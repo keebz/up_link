@@ -37,6 +37,9 @@ def show
 end
 
 def destroy
+	@link = Link.find(params[:id])
+	@link.destroy
+	redirect_to '/'
 end
 
 private
