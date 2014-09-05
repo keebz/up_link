@@ -10,10 +10,10 @@
 	</div>
 
 	<div id="description">
-		<%= @link.comments.post %>
+		<% @link.comments.each do |comment| %>
+		<li><%= comment.post + " - " + User.find(comment.user_id).email %></li>
+		<% end %>
 	</div>
-
-
 
 		<h3>Add Your Comment:</h3>
 
