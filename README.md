@@ -36,6 +36,8 @@ $ rails s
 ```
 It should now be available at `localhost:3000`.
 
+OR you can run it at: http://up-link.herokuapp.com/
+
 ##Author
 [Lee Kebler](http://keebz.com)
 
