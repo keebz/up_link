@@ -1,0 +1,28 @@
+<% content_for(:title, "New Comment| Up_Link") %>
+<div class = "container">
+	
+	<div id="title">
+		<%= @link.title %>
+	</div>
+		<br>
+	<div id="description">
+		<%= @link.description %>
+	</div>
+
+	<div id="description">
+		<%= @link.comments.post %>
+	</div>
+
+
+
+		<h3>Add Your Comment:</h3>
+
+		<%= form_for([@link, @comment]) do |form| %>
+			<div class = "form-group">
+				<%= form.label :post %>
+				<br>
+				<%= form.text_area :post %>
+			</div>
+			<%= form.submit(:class => "btn btn-primary") %> <%= link_to "Cancel", root_path, :class => "btn btn-default" %>
+		<% end %>
+</div>

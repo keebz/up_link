@@ -1,0 +1,9 @@
+
+<%= form_for(@comment) do |form| %>
+	<div class = "form-group">
+		<%= form.label :comment %>
+		<br>
+		<%= form.text_area :comment %>
+	</div>
+	<%= form.submit(:class => "btn btn-primary") %> <%= link_to "Cancel", root_path, :class => "btn btn-default" %>
+<% end %>

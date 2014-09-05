@@ -1,7 +1,7 @@
 <% content_for(:title, "Index | Up_Link") %>
 <div class = "container">
 <h1>Up_Link</h1>
-<h4>Here are the top 5 links you should know about RIGHT.NOW.</h4>
+<h4>Here are the top 5 links</h4>
 <%= link_to "Submit New Link", new_link_path, :class => "btn btn-primary" %></p>
 <br>
 <br>
@@ -19,7 +19,7 @@
 		<%= link_to "x", link_path(link.id), :data => {:method => "delete"}, 
 										     :class => "btn-xs btn-danger" %>
 		<br>
-		<span id="description"><%= link.description %></span></p>
+		<span id="description"><%= link.description %> - <%= link_to "comments", new_link_comment_path(link.id) %></span></p>
 	</div>
 <% end %> 
 
