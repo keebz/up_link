@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140904180502) do
+ActiveRecord::Schema.define(version: 20140904192938) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "links", force: true do |t|
     t.string  "title"
-    t.string  "link"
     t.integer "rating"
+    t.string  "hyperlink"
   end
 
 end

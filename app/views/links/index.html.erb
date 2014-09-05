@@ -4,7 +4,7 @@
 <%= link_to "Submit New Story", new_link_path, :class => "btn btn-primary" %></p>
 
 <% @links.each do |link| %>
-<p><%= link.name %></p>
+<p><%= link_to link.title, link.hyperlink %></p>
 <% end %> 
 
 </div>
